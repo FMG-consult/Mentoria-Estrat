@@ -1,0 +1,427 @@
+/* ===========================
+   RESET E VARIÁVEIS
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #1a3a52;
+    --primary-darker: #0f2438;
+    --accent-gold: #c9a961;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --box-bg: #ffffff;
+    --whatsapp: #25d366;
+    --email: #d4a574;
+    --linkedin: #0077b5;
+}
+
+/* ===========================
+   BODY E CONTAINER
+   =========================== */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.background-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1300px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* ===========================
+   COLUNA ESQUERDA
+   =========================== */
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.header {
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.header .subtitle {
+    font-size: 1rem;
+    color: var(--accent-gold);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ===========================
+   BOXES
+   =========================== */
+
+.box {
+    background: var(--box-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.box-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.box-title i {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 169, 97, 0.1);
+    border-radius: 8px;
+}
+
+.box-title h2 {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin: 0;
+}
+
+.box-text {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===========================
+   CTA
+   =========================== */
+
+.cta {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cta h3 {
+    font-size: 1.6rem;
+    color: var(--text-light);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cta .highlight {
+    color: var(--accent-gold);
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #1f9d4f 100%);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+.btn-email {
+    background: linear-gradient(135deg, #d4a574 0%, #b8935c 100%);
+}
+
+.btn-email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(212, 165, 116, 0.4);
+}
+
+.btn-linkedin {
+    background: linear-gradient(135deg, #0077b5 0%, #005a87 100%);
+}
+
+.btn-linkedin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 119, 181, 0.4);
+}
+
+/* ===========================
+   COLUNA DIREITA - FOTO
+   =========================== */
+
+.right-photo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* ===========================
+   RESPONSIVIDADE - TABLET
+   =========================== */
+
+@media (max-width: 1024px) {
+    .background-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .right-photo {
+        order: -1;
+    }
+
+    .photo {
+        max-width: 300px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header .subtitle {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===========================
+   RESPONSIVIDADE - MOBILE
+   =========================== */
+
+@media (max-width: 768px) {
+    .page-container {
+        padding: 25px 15px;
+    }
+
+    .background-wrapper {
+        gap: 25px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .box-title i {
+        font-size: 1.3rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .box-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .box-text {
+        font-size: 0.9rem;
+    }
+
+    .cta h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 14px 18px;
+        font-size: 0.9rem;
+    }
+
+    .photo {
+        max-width: 280px;
+    }
+}
+
+/* ===========================
+   RESPONSIVIDADE - SMALL MOBILE
+   =========================== */
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: 20px 12px;
+    }
+
+    .background-wrapper {
+        gap: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .box {
+        padding: 18px;
+    }
+
+    .box-title i {
+        font-size: 1.2rem;
+        width: 32px;
+        height: 32px;
+    }
+
+    .box-title h2 {
+        font-size: 1rem;
+    }
+
+    .box-text {
+        font-size: 0.85rem;
+    }
+
+    .cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+
+    .photo {
+        max-width: 100%;
+    }
+
+    .left-content {
+        gap: 15px;
+    }
+
+    .buttons-container {
+        gap: 10px;
+    }
+}
+
+/* ===========================
+   ANIMAÇÕES
+   =========================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.box {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.box:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.box:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.box:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+.cta {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.buttons-container {
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.photo {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
